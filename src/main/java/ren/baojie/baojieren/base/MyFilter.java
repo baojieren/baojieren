@@ -1,0 +1,25 @@
+package ren.baojie.baojieren.base;
+
+import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
+import java.io.IOException;
+
+@WebFilter(urlPatterns = "/*")
+public class MyFilter implements Filter {
+
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+        System.out.println("初始化过滤器");
+    }
+
+    @Override
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+        System.out.println("do过滤器");
+        chain.doFilter(request,response);
+    }
+
+    @Override
+    public void destroy() {
+        System.out.println("销毁过滤器");
+    }
+}
