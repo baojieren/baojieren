@@ -26,7 +26,6 @@
     where id = #{id}
   </delete>
   <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="ren.baojie.baojieren.model.UserPO" useGeneratedKeys="true">
-    <!--@mbg.generated-->
     insert into user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="name != null">

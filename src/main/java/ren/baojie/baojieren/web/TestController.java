@@ -11,19 +11,20 @@ import javax.annotation.Resource;
 
 @Slf4j
 @RestController
-@RequestMapping("/test")
+@RequestMapping("/baojie")
 public class TestController {
 
     @Resource
     private UserPOService userPOService;
-    @GetMapping("/t")
-    public String test(){
+
+    @GetMapping("/hello")
+    public String test(String name) {
         UserPO userPO = new UserPO();
-        userPO.setName("baojie");
+        userPO.setName(name);
         userPO.setAge(19);
         userPO.setPassword("123123");
         userPOService.insertSelective(userPO);
-        return "ojbk";
+        return "你输入的：" + name;
     }
 
 }
