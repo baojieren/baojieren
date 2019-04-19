@@ -1,5 +1,5 @@
 #镜像出处
-FROM java:8
+FROM frolvlad/alpine-oraclejre8:slim
 #维护者信息
 MAINTAINER baojieren
 #在容器的根目录中创建springBoot-baojie文件夹
