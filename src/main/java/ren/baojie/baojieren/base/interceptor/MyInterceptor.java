@@ -1,6 +1,7 @@
-package ren.baojie.baojieren.base;
+package ren.baojie.baojieren.base.interceptor;
 
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
